@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: #f5f5f5;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.section {
+  padding: 100px 10%;
+}
+
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #d4af37;
+  width: 0%;
+  z-index: 1000;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+  z-index: 999;
+}
+
+.navbar.scrolled {
+  background: rgba(0,0,0,0.9);
+  padding: 10px 10%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #d4af37;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.reserve-btn {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reserve-btn:hover {
+  background: #d4af37;
+  color: black;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url('images/main.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  background: #d4af37;
+  border: none;
+  cursor: pointer;
+}
+
+/* About & Chef */
+.about-container,
+.chef-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about img,
+.chef img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* Menu */
+.menu h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filters button {
+  margin: 0 10px;
+  padding: 8px 20px;
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.4s;
+  width: 100%; /* remove fixed width */
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.price {
+  font-weight: 500;
+  color: #d4af37;
+  margin: 5px 0;
+}
+
+.desc {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/*Contact Section*/
+
+.contact-section {
+  text-align: center;
+  padding: 50px 10%;
+}
+
+/* Reservation */
+.reservation form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.reservation input,
+.reservation button {
+  padding: 10px;
+  border: none;
+}
+
+.reservation button {
+  background: #d4af37;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+}
